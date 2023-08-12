@@ -25,13 +25,13 @@
   transform: rotate(180deg);
 }
 .back {
-  background-image: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png");
   background-size: cover;
 }
 .paired {
   background-color: #e0e0e0;
 }
-#header{
+#header {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
