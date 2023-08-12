@@ -91,16 +91,16 @@ const view = {
   },
 
   showGameFinished() {
-    const div = document.createElement('div')
-    div.classList.add('finished')
+    const div = document.createElement("div");
+    div.classList.add("finished");
     div.innerHTML = `
       <p>Complete!</p>
       <p>Score: ${model.score}</p>
       <p>You've tried: ${model.triedTimes} times</p>
-    `
-    const header = document.querySelector('#header')
-    header.before(div)
-  }
+    `;
+    const header = document.querySelector("#header");
+    header.before(div);
+  },
 };
 
 const controller = {
@@ -132,15 +132,15 @@ const controller = {
           model.revealedCards = [];
           this.currentState = GAME_STATE.FirstCardAwaits;
           view.displayScore((model.score += 10));
-          if (model.score === 20) {
-            this.currentState = GAME_STATE.GameFinished
-            view.showGameFinished()
-            return
+          if (model.score === 260) {
+            this.currentState = GAME_STATE.GameFinished;
+            view.showGameFinished();
+            return;
           }
         } else {
           // 配對失敗
           this.currentState = GAME_STATE.CardsMatchedFailed;
-          view.matchFailedAnimation(...model.revealedCards)
+          view.matchFailedAnimation(...model.revealedCards);
           setTimeout(this.restCards, 1000);
         }
         break;
